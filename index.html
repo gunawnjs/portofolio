@@ -12,8 +12,8 @@
 			<div class="group__nav">
 				<ul class="btn-nav">
 					<li>
-						<button>
-							<span class="mdi mdi-menu mdi-24px"></span>
+						<button id="burger-menu">
+							<span><img src="./assets/img/Vector.svg"></span>
 						</button>
 					</li>
 				</ul>
@@ -25,11 +25,25 @@
 				</ul>
 			</div>
 			<div class="menu-wrapper">
+				<div class="exit-menu">
+					<span id="exit" class="mdi mdi-close"></span>
+				</div>
 				<ul class="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#projects">Project</a></li>
+					<a href="#"><li>Home</li></a>
+					<!-- <a href="#about"><li>About</li></a> -->
+					<a href="#projects"><li>Project</li></a>
 				</ul>
+			</div>
+			<div class="navigation">
+				<div class="navigation-up">
+					<a href="#top"><span class="mdi mdi-chevron-up"></span></a>
+				</div>
+				<div class="navigation-content">
+					<a href="#"><span class="mdi mdi-whatsapp"></span></a>
+					<a href="#"><span class="mdi mdi-instagram"></span></a>
+					<a href="#"><span class="mdi mdi-linkedin"></span></a>
+					
+				</div>
 			</div>
 		</nav>
 		<header>
@@ -55,25 +69,29 @@
 			<div class="btn-headline">
 				<a href="#">Hire me</a>
 			</div>
-			<div class="socmed__header">
-				<p>Contact me</p>
-				<div class="socmed-group">
+			<div class="footer__header">
+				<div class="footer__header-group">
+					<div class="location"><h3>Location</h3></div>
+					<p><span class="mdi mdi-map-marker"></span>&nbsp;Gresik, Indonesia</p>
+				</div>
+				
+				<!-- <div class="socmed-group">
 					<a href="#"><span class="mdi mdi-whatsapp"></span></a>
 					<a href="#"><span class="mdi mdi-instagram"></span></a>
 					<a href="#"><span class="mdi mdi-linkedin"></span></a>
-				</div>
+				</div> -->
 			</div>
 		</header>
 		<main>
-			<div class="about-wrapper">
-				<article id="about">
-					<h1>About Me</h1>
+			<div id="about" class="about-wrapper">
+				<article>
+					<h1>About me</h1>
 					<div class="about__flex-wrapper">
 						<div class="img-container">
 							<img src="./assets/img/Blogging-bro.svg">
 						</div>
 						<div class="about-content">
-							<p>Saya akrab dipanggil Gunawan, <em>fresh graduate</em> dari salah satu perguruan tinggi swasta di Gresik. Sejak duduk dibangku SMK saya mempunyai ketertarikan di dunia <em>Web Programmer</em>. <br><br>Saya juga terbuka bila ingin belajar bersama atau sekedar ngopi bareng, bisa menghubungi saya langsung melalui halaman di website ini, terimakasih.</p>
+							<p>Saya akrab dipanggil Gunawan, <em>fresh graduate</em> dari salah satu perguruan tinggi swasta di Gresik. Sejak duduk dibangku SMK saya mempunyai ketertarikan di dunia <em>Web Programmer</em>. <br><br>Kesibukan saya saat ini selain mengikuti pelatihan online secara gratis, saya juga belajar menggunakan beberapa tools dalam pengembangan aplikasi berbasis website. Terakhir kali saya belajar menggunakan Node.js, Hapi, dan Express.</p>
 						</div>
 						<h3>Professional Skills</h3>
 						<div class="tag-group__about">
@@ -90,36 +108,84 @@
 			<div id="projects" class="project-wrapper">
 				<h1>Latest Project</h1>
 				<div class="project-content">
-					<div class="project__card-view">
-						<h3>Lorem Ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tincidunt felis, vel posuere tellus. Donec volutpat vel urna in imperdiet. Vivamus cursus aliquam tempor.</p>
-					</div>					
-					<div class="project__card-view">
-						<h3>Lorem Ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tincidunt felis, vel posuere tellus. Donec volutpat vel urna in imperdiet. Vivamus cursus aliquam tempor.</p>
-					</div>					
-					<div class="project__card-view">
-						<h3>Lorem Ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tincidunt felis, vel posuere tellus. Donec volutpat vel urna in imperdiet. Vivamus cursus aliquam tempor.</p>
+					<!-- <div class="card-view">
+						<img src="./assets/img/rand/original-da3b77c9c5eec77d571a48a273cbba1a.webp" alt="" srcset="">
+						<div class="content-card">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tincidunt felis, vel posuere tellus. Donec volutpat vel urna in imperdiet. Vivamus cursus aliquam tempor.</p>
+						</div>
+						<div class="link-card">
+							<p>View More</p>
+							<span class="mdi mdi-chevron-right-circle"></span>
+						</div>
+					</div> -->
+					
+					<!-- Gaya baru - konsep minimalist -->
+					<div class="list-projects">
+						<img src="./assets/img/rand/original-da3b77c9c5eec77d571a48a273cbba1a.webp">
+						<h2>Judul Project</h2>
+						<p class="date-created">Created · 11 Okt 2022</p>
+						<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem aperiam esse quidem ea blanditiis sunt molestiae recusandae illo, repudiandae aspernatur eligen....</p>
+						<h3>Languages</h3>
+						<div class="tag-group__about">
+							<span>HTML & CSS</span>
+							<span>JavaScript</span>
+							<span>PHP</span>
+						</div>
+						<a href="#">Source Code <span class="mdi mdi-chevron-right"></span></a>
 					</div>
-					<div class="project__card-view">
-						<h3>Lorem Ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a tincidunt felis, vel posuere tellus. Donec volutpat vel urna in imperdiet. Vivamus cursus aliquam tempor.</p>
+					<div class="list-projects">
+						<img src="./assets/img/rand/original-da3b77c9c5eec77d571a48a273cbba1a.webp">
+						<h2>Judul Project</h2>
+						<p class="date-created">Created · 11 Okt 2022</p>
+						<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem aperiam esse quidem ea blanditiis sunt molestiae recusandae illo, repudiandae aspernatur eligen....</p>
+						<h3>Languages</h3>
+						<div class="tag-group__about">
+							<span>HTML & CSS</span>
+							<span>JavaScript</span>
+							<span>PHP</span>
+						</div>
+						<a href="#">Source Code <span class="mdi mdi-chevron-right"></span></a>
+					</div>
+					<div class="list-projects">
+						<img src="./assets/img/rand/original-da3b77c9c5eec77d571a48a273cbba1a.webp">
+						<h2>Judul Project</h2>
+						<p class="date-created">Created · 11 Okt 2022</p>
+						<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem aperiam esse quidem ea blanditiis sunt molestiae recusandae illo, repudiandae aspernatur eligen....</p>
+						<h3>Languages</h3>
+						<div class="tag-group__about">
+							<span>HTML & CSS</span>
+							<span>JavaScript</span>
+							<span>PHP</span>
+						</div>
+						<a href="#">Source Code <span class="mdi mdi-chevron-right"></span></a>
+					</div>
+					<div class="list-projects">
+						<img src="./assets/img/rand/original-da3b77c9c5eec77d571a48a273cbba1a.webp">
+						<h2>Judul Project</h2>
+						<p class="date-created">Created · 11 Okt 2022</p>
+						<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem aperiam esse quidem ea blanditiis sunt molestiae recusandae illo, repudiandae aspernatur eligen....</p>
+						<h3>Languages</h3>
+						<div class="tag-group__about">
+							<span>HTML & CSS</span>
+							<span>JavaScript</span>
+							<span>PHP</span>
+						</div>
+						<a href="#">Source Code <span class="mdi mdi-chevron-right"></span></a>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer>
 			<h3><q>&nbsp;Thank's for Scrolling&nbsp;</q></h3>
-			<div class="socmed__footer">
+			<p>Developed with ❤️ by <a href="https://github.com/gunawnjs">me</a></p>
+			<!-- <div class="socmed__footer">
 				<p>Let's Get Connected!</p>
 				<div class="socmed-group">
 					<a href="#"><span class="mdi mdi-whatsapp"></span></a>
 					<a href="#"><span class="mdi mdi-instagram"></span></a>
 					<a href="#"><span class="mdi mdi-linkedin"></span></a>
 				</div>
-				<p class="copyrights">Developed with ❤️ by <a href="https://github.com/gunawnjs">me</a></p>
-			</div>
+			</div> -->
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 		<script src="main.js"></script>

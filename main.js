@@ -1,45 +1,45 @@
-    // Template
-    $('a[href^="#"]').click(function(event) {
-        let id = $(this).attr("href");
-        let offset = 10;
-        let target = $(id).offset().top - offset;
-        $('html, body').animate({scrollTop:target}, 500);
-        event.preventDefault();
-    });
+const navigation = $('.navigation');
+const navUp = $('.navigation-up');
 
-    $(function() {  
-        let pull        = $('#pull');  
-            menu        = $('nav ul');  
-            menuHeight  = menu.height();  
-        
-        $(pull).on('click', function(e) {  
-            e.preventDefault();  
-                menu.slideToggle();  
-            });  
-        });
 
-    $(window).resize(function(){  
-        let w = $(window).width();  
-        if(w > 400 && menu.is(':hidden')) {  
-            menu.removeAttr('style');  
-        }  
-        });
-    // end of template
-    $(document).ready(function(){
-        $('button').click(function(){
-        $('.menu').toggle(300, function(){
-            if($('.menu').css('display') == 'block'){
-                $('nav').addClass('shadow__nav');
-            } else {
-                $('nav').removeClass('shadow__nav');
+$(document).ready(function(){
+
+    $('#exit').click(function(){
+        if($('.menu-wrapper').css('visibility') == 'visible'){
+            $('.menu-wrapper').css('visibility', 'hidden')
+            if($('.menu-wrapper').css('visibility') == 'hidden'){
+                $('html, body').css({
+                    overflow: '',
+                    height: ''
+                });
             }
-        });
-        });
-    });
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 10) {
-            $('#nav').addClass('shadow__nav');
-        } else {
-            $('#nav').removeClass('shadow__nav');
         }
     });
+
+    $('#burger-menu').click(function(){
+        if($('.menu-wrapper').css('visibility') == 'hidden'){
+            $('.menu-wrapper').css('visibility', 'visible')
+            if($('.menu-wrapper').css('visibility') == 'visible'){
+                $('html, body').css({
+                    overflow: 'hidden',
+                    height: '100%'
+                });
+            }
+        } 
+    });
+
+});
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 10) {
+        $('#nav').addClass('shadow__nav');
+        if(navigation.css('visibility') == 'hidden'){
+            navUp.css('visibility', 'hidden');
+        } else {
+            navUp.css('visibility', 'visible');
+        }
+    } else {
+        $('#nav').removeClass('shadow__nav');
+        navUp.css('visibility', 'hidden');
+    }
+});
